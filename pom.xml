@@ -31,6 +31,20 @@
 			<artifactId>spring-boot-starter-security</artifactId>
 		</dependency>
 
+		<!-- Agrega conceptos de oauth -->
+		<dependency>
+			<groupId>org.springframework.security.oauth</groupId>
+			<artifactId>spring-security-oauth2</artifactId>
+			<version>2.3.3.RELEASE</version>
+		</dependency>
+		<!-- Permite auto configurar springboot -->
+		<dependency>
+			<groupId>org.springframework.security.oauth.boot</groupId>
+			<artifactId>spring-security-oauth2-autoconfigure</artifactId>
+			<version>2.1.1.RELEASE</version>
+		</dependency>
+
+
 		<!-- Permite testear cada parte de spring facilmenmte -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
