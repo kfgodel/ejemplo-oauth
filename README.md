@@ -18,6 +18,7 @@ actualmente sólo nos queda usar la [version port anterior](http://projects.spri
 6. Declarar un client custom en [autorization server](src/main/java/info/kfgodel/oauthtest/AuthorizationServerConfig.java) para soportar grant_type: autorization_code
    - Verificar flujo de autorizacion y login con [este link](http://localhost:8080/oauth/authorize?grant_type=authorization_code&response_type=code&client_id=clientId&state=1234) segun [ejemplo de spring](https://docs.spring.io/spring-security-oauth2-boot/docs/current-SNAPSHOT/reference/htmlsingle/#oauth2-boot-testing-authorization-code-flow)
 7. Explicitar un authentication manager en [la configuracion del autorization server](src/main/java/info/kfgodel/oauthtest/AuthorizationServerConfig.java) para permitir el grant password.
+8. Reemplazar el index por un controller con data del usuario (en formato JSON)
 
 
 ### Verificar autenticacion
