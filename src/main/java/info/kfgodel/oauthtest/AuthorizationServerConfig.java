@@ -9,6 +9,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.oauth2.config.annotation.configurers.ClientDetailsServiceConfigurer;
 import org.springframework.security.oauth2.config.annotation.web.configuration.AuthorizationServerConfigurerAdapter;
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerEndpointsConfigurer;
+import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerSecurityConfigurer;
 
 @Configuration
 public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdapter {
@@ -26,7 +27,8 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
     clients
       .inMemory()
       .withClient("clientId")
-      .secret(passwordEncoder().encode("clientSecret"))
+      // Como los clientes web no mandan secret (JS), el vacio es el unico valor que matchea
+      .secret(passwordEncoder().encode(""))
       .scopes("any")
       .authorizedGrantTypes("authorization_code","client_credentials","password")
       .redirectUris("/");
@@ -36,4 +38,12 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
   public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
     endpoints.authenticationManager(authenticationConfiguration.getAuthenticationManager());
   }
+
+  @Override
+  public void configure(AuthorizationServerSecurityConfigurer security) throws Exception {
+    // Esto permite que los parametros para obtener un access token vengan como query params o en el body
+    security
+            .allowFormAuthenticationForClients();
+  }
+
 }

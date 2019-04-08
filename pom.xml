@@ -8,8 +8,9 @@
 		<version>2.1.2.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
+
 	<groupId>info.kfgodel</groupId>
-	<artifactId>oauth-test</artifactId>
+	<artifactId>ejemplo-oauth</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>oauth-test</name>
 	<description>Demo project for Spring Boot</description>

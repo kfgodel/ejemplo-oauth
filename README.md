@@ -30,4 +30,4 @@ Client credentials:
 > curl clientId:clientSecret@localhost:8080/oauth/token -dgrant_type=client_credentials -dscope=any
 
 Password
-> curl clientId:clientSecret@localhost:8080/oauth/token -dgrant_type=password -dscope=any -dusername=enduser -dpassword=password
+> curl clientId:clientSecret@localhost:8080/oauth/token -dgrant_type=password -dscope=any -dusername=user -dpassword=password
