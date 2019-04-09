@@ -36,13 +36,13 @@
 		<dependency>
 			<groupId>org.springframework.security.oauth</groupId>
 			<artifactId>spring-security-oauth2</artifactId>
-			<version>2.3.4.RELEASE</version>
+			<version>2.3.5.RELEASE</version>
 		</dependency>
 		<!-- Permite auto configurar springboot -->
 		<dependency>
 			<groupId>org.springframework.security.oauth.boot</groupId>
 			<artifactId>spring-security-oauth2-autoconfigure</artifactId>
-			<version>2.1.1.RELEASE</version>
+			<version>2.1.4.RELEASE</version>
 		</dependency>
 
 
