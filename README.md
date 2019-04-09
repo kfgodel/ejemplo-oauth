@@ -27,7 +27,7 @@ Authorization Code
 - http://localhost:8080/oauth/authorize?grant_type=authorization_code&response_type=code&client_id=clientId&extraData=1234
 
 Client credentials:
-> curl clientId:clientSecret@localhost:8080/oauth/token -dgrant_type=client_credentials -dscope=any
+> curl clientId:@localhost:8080/oauth/token -dgrant_type=client_credentials -dscope=any
 
 Password
-> curl clientId:clientSecret@localhost:8080/oauth/token -dgrant_type=password -dscope=any -dusername=user -dpassword=password
+> curl clientId:@localhost:8080/oauth/token -dgrant_type=password -dscope=any -dusername=user -dpassword=password
